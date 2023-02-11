@@ -16,8 +16,13 @@ import { HtmlelementsComponent } from './html/htmlelements/htmlelements.componen
 import { HtmlattributesComponent } from './html/htmlattributes/htmlattributes.component';
 import { HtmlheadingsComponent } from './html/htmlheadings/htmlheadings.component';
 import { HtmlparagraphsComponent } from './html/htmlparagraphs/htmlparagraphs.component';
-
-
+import { HTMLtextformattingComponent } from './html/htmltextformatting/htmltextformatting.component';
+import { HTMLlinksComponent } from './html/htmllinks/htmllinks.component';
+import { HTMLimagesComponent } from './html/htmlimages/htmlimages.component';
+import { HTMLtablesComponent } from './html/htmltables/htmltables.component';
+import { HTMLlistComponent } from './html/htmllist/htmllist.component';
+import { HTMLclassComponent } from './html/htmlclass/htmlclass.component';
+import { HTMLiframeComponent } from './html/htmliframe/htmliframe.component';
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path: 'home', component: HomeComponent },
@@ -89,6 +94,56 @@ const routes: Routes = [
     {
       path:'',
       component: HtmlparagraphsComponent
+    }
+  ]},
+
+  {path: 'html/formatting', component: HtmlComponent,
+  children: [
+    {
+      path:'',
+      component: HTMLtextformattingComponent
+    }
+  ]},
+  {path: 'html/links', component: HtmlComponent,
+  children: [
+    {
+      path:'',
+      component: HTMLlinksComponent
+    }
+  ]},
+  {path: 'html/images', component: HtmlComponent,
+  children: [
+    {
+      path:'',
+      component: HTMLimagesComponent
+    }
+  ]},
+  {path: 'html/tables', component: HtmlComponent,
+  children: [
+    {
+      path:'',
+      component: HTMLtablesComponent
+    }
+  ]},
+  {path: 'html/list', component: HtmlComponent,
+  children: [
+    {
+      path:'',
+      component: HTMLlistComponent
+    }
+  ]},
+  {path: 'html/class', component: HtmlComponent,
+  children: [
+    {
+      path:'',
+      component: HTMLclassComponent
+    }
+  ]},
+  {path: 'html/iframe', component: HtmlComponent,
+  children: [
+    {
+      path:'',
+      component: HTMLiframeComponent
     }
   ]},
 

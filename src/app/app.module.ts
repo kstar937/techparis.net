@@ -20,6 +20,13 @@ import { HtmlelementsComponent } from './html/htmlelements/htmlelements.componen
 import { HtmlattributesComponent } from './html/htmlattributes/htmlattributes.component';
 import { HtmlheadingsComponent } from './html/htmlheadings/htmlheadings.component';
 import { HtmlparagraphsComponent } from './html/htmlparagraphs/htmlparagraphs.component';
+import { HTMLtextformattingComponent } from './html/htmltextformatting/htmltextformatting.component';
+import { HTMLlinksComponent } from './html/htmllinks/htmllinks.component';
+import { HTMLimagesComponent } from './html/htmlimages/htmlimages.component';
+import { HTMLtablesComponent } from './html/htmltables/htmltables.component';
+import { HTMLlistComponent } from './html/htmllist/htmllist.component';
+import { HTMLclassComponent } from './html/htmlclass/htmlclass.component';
+import { HTMLiframeComponent } from './html/htmliframe/htmliframe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +45,13 @@ import { HtmlparagraphsComponent } from './html/htmlparagraphs/htmlparagraphs.co
   HtmlattributesComponent,
   HtmlheadingsComponent,
   HtmlparagraphsComponent,
+  HTMLtextformattingComponent,
+  HTMLlinksComponent,
+  HTMLimagesComponent,
+  HTMLtablesComponent,
+  HTMLlistComponent,
+  HTMLclassComponent,
+  HTMLiframeComponent,
 
   ],
   imports: [
