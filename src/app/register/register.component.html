@@ -1,0 +1,31 @@
+<div class="col-md-6">
+    <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)">
+        <div class="form-group">
+          <label for="exampleInputEmail1">f_name</label>
+          <input type="text" formControlName="f_name" class="form-control" id="f_name" aria-describedby="emailHelp" placeholder="Enter email" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="exampleInputPassword1">l_name</label>
+          <input type="text" class="form-control" formControlName="l_name" id="l_name" placeholder="Password" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleInputPassword1">email</label>
+            <input type="email" class="form-control" formControlName="email" id="email" placeholder="Password" required>
+          </div> 
+    
+        <div class="form-group">
+            <label for="exampleInputPassword1">password</label>
+            <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password" required>
+          </div> 
+    
+          <div class="form-group">
+            <label for="exampleInputPassword1">mobile</label>
+            <input type="number" class="form-control" formControlName="mobile" id="mobile" placeholder="Password" required>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <a class="btn " routerLink="/login" routerLinkActive="active">Login</a>
+
+</div>
