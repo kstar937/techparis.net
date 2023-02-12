@@ -41,6 +41,8 @@ export class AppComponent implements OnInit{
 
   logout() {
     this.dataService.deleteToken();
+    this.dataService.deleteuserDataemail();
+    this.dataService.deleteuserDatapass();
     window.location.href = window.location.href;
   }
 }

@@ -9,9 +9,12 @@ import { ApiService } from '../api.service';
 })
 export class DashboardComponent implements OnInit{
 
+
+  setuserDatapass: any;
+  setuserDataemail:any;
   userDetails:any;
   auth: any;
-  constructor(private router: Router, private dataservice: ApiService) {  }
+  constructor(private router: Router, private dataService: ApiService) {  }
 
 
   ngOnInit(): void {
@@ -28,7 +31,16 @@ export class DashboardComponent implements OnInit{
 
       this.router.navigate(['/login']);
     }
+ 
 
+    this.setuserDataemail = localStorage.getItem('setuserDataemail');
+    this.setuserDatapass = localStorage.getItem('setuserDatapass');
   }
-  
+  logout() {
+    this.dataService.deleteToken();
+    this.dataService.deleteuserDataemail();
+    this.dataService.deleteuserDatapass();
+    window.location.href = window.location.href;
+  }
+
 }

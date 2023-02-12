@@ -1,1 +1,17 @@
-<p>css works!</p>
+
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width:200px;" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+   <ul class="nav-list p-0">
+    <li class="nav-list-item" *ngFor="let item of list">
+      <button routerLink="{{item.link}}" routerLinkActive="btn-dark" class="w3-bar-item w3-button ">{{item.name}}</button>
+    </li>
+  </ul>
+  </div>
+  
+  <div>
+    <button class="w3-button w3-black w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+  </div>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+  

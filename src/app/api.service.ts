@@ -30,12 +30,36 @@ export class ApiService {
     const url = environment.API_EndPoint + 'user_loginregister/login.php';
     return this.httpClient.post<any>(url, {email, password})
     .pipe(map(Users => {
-     //console.log(Users.email)
+    // console.log('userData',Users)
       this.setToken(Users.email);
-      //this.getLoggedInName.emit(true);
+      this.setuserDataemail(Users.email);
+      this.setuserDatapass(Users.password);
+      this.getLoggedInName.emit(true);
      return Users;
     }));
   }
+
+
+  setuserDatapass(setuserDatapass: string) {
+    localStorage.setItem('setuserDatapass', setuserDatapass);
+  }
+
+  setuserDataemail(setuserDataemail: string) {
+    localStorage.setItem('setuserDataemail', setuserDataemail);
+  }
+
+
+  deleteuserDatapass() {
+    localStorage.removeItem('setuserDatapass');
+  }
+
+  deleteuserDataemail() {
+    localStorage.removeItem('setuserDataemail');
+  }
+
+
+
+
 
   setToken(token: string) {
     localStorage.setItem('token', token);

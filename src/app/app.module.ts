@@ -27,6 +27,24 @@ import { HTMLtablesComponent } from './html/htmltables/htmltables.component';
 import { HTMLlistComponent } from './html/htmllist/htmllist.component';
 import { HTMLclassComponent } from './html/htmlclass/htmlclass.component';
 import { HTMLiframeComponent } from './html/htmliframe/htmliframe.component';
+import { CSShomeComponent } from './css/csshome/csshome.component';
+import { CSSintroComponent } from './css/cssintro/cssintro.component';
+import { CSSsyntaxComponent } from './css/csssyntax/csssyntax.component';
+import { CSSaddcssComponent } from './css/cssaddcss/cssaddcss.component';
+import { CSScolorsComponent } from './css/csscolors/csscolors.component';
+import { CSSbackgroundComponent } from './css/cssbackground/cssbackground.component';
+import { CSSbordersComponent } from './css/cssborders/cssborders.component';
+import { CSSmarginsComponent } from './css/cssmargins/cssmargins.component';
+import { CSSpaddingComponent } from './css/csspadding/csspadding.component';
+import { CSSdimensionComponent } from './css/cssdimension/cssdimension.component';
+import { CSStextComponent } from './css/csstext/csstext.component';
+import { CSSfontComponent } from './css/cssfont/cssfont.component';
+import { CSSlinksComponent } from './css/csslinks/csslinks.component';
+import { CSSlistComponent } from './css/csslist/csslist.component';
+import { CSStablesComponent } from './css/csstables/csstables.component';
+import { CSSlayoutComponent } from './css/csslayout/csslayout.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +70,22 @@ import { HTMLiframeComponent } from './html/htmliframe/htmliframe.component';
   HTMLlistComponent,
   HTMLclassComponent,
   HTMLiframeComponent,
+  CSShomeComponent,
+  CSSintroComponent,
+  CSSsyntaxComponent,
+  CSSaddcssComponent,
+  CSScolorsComponent,
+  CSSbackgroundComponent,
+  CSSbordersComponent,
+  CSSmarginsComponent,
+  CSSpaddingComponent,
+  CSSdimensionComponent,
+  CSStextComponent,
+  CSSfontComponent,
+  CSSlinksComponent,
+  CSSlistComponent,
+  CSStablesComponent,
+  CSSlayoutComponent,
 
   ],
   imports: [
@@ -64,7 +98,9 @@ import { HTMLiframeComponent } from './html/htmliframe/htmliframe.component';
     ReactiveFormsModule,
     FormsModule,HttpClientModule
   ],
-  providers: [],
+  
+  providers: [  {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

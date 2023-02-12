@@ -2,20 +2,20 @@
     <div class="m-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">Brand</a>
+                <a href="/#" class="navbar-brand">LOGO</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link active">Home</a>                        
+                        <a href="/#" class="nav-item nav-link">Accueil</a>                        
                         <a routerLink="/html/home" class="nav-link">HTML</a>
                         <a routerLink="/css" class="nav-link">CSS</a>
                         <a routerLink="/php" class="nav-link">PHP</a>
                     </div>
 
                     <div class="navbar-nav ms-auto">
-                      <a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="/dashboard" routerLinkActive="active">Profile</a>
+                      <a class="nav-item nav-link" routerLink="/dashboard" routerLinkActive="active">Profile</a>
                       <a class="nav-item nav-link" *ngIf="loginbtn" routerLink="/login" routerLinkActive="active">Login</a>
                       <a class="nav-item nav-link" *ngIf="logoutbtn" (click)="logout()" routerLinkActive="active">Logout</a>
 

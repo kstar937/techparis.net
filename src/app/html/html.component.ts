@@ -11,7 +11,7 @@ export class HtmlComponent {
     {
       number:'1',
       name:"Accueil",
-      link:"/html/home",
+      link:"/home",
     },
     {
       number:'2',
